@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Controle Financeiro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- CHART JS (PRECISA VIR ANTES DO SCRIPT) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>💰 Meu Controle Financeiro</h1>
+
+<div class="container">
+
+<h2>Saldo: R$ <span id="saldo">0</span></h2>
+
+<input type="text" id="descricao" placeholder="Descrição">
+<input type="number" id="valor" placeholder="Valor">
+
+<select id="categoria">
+<option value="Salário">Salário</option>
+<option value="Alimentação">Alimentação</option>
+<option value="Transporte">Transporte</option>
+<option value="Lazer">Lazer</option>
+<option value="Contas">Contas</option>
+</select>
+
+<br>
+
+<button class="btn-receita" onclick="adicionarReceita()">+ Receita</button>
+<button class="btn-gasto" onclick="adicionarGasto()">- Gasto</button>
+
+<div class="listas">
+
+    <div class="coluna">
+        <h3>📈 Receitas</h3>
+        <ul id="listaReceitas"></ul>
+    </div>
+
+    <div class="coluna">
+        <h3>📉 Gastos</h3>
+        <ul id="listaGastos"></ul>
+    </div>
+
+</div>
+
+<h3>📊 Gastos por Categoria</h3>
+<canvas id="grafico"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
